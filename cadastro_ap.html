@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condomínio</title>
+</head>
+<body>
+    <h1>Cadastro Apartamento</h1>
+    <form action="/cadastrar_apartamento" method="post">
+        <label for="bloco">Bloco: </label><br>
+        <select id="bloco" name="bloco" required>
+            <option value="">Selecione</option>
+            <option value="BA">Bloco A</option>
+            <option value="BB">Bloco B</option>
+            <option value="BC">Bloco C</option>
+            <option value="BD">Bloco D</option>
+            <option value="BE">Bloco E</option>
+
+
+
+
+
+
+
+
+
+        <br>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade">
+        <br>
+        <label for="preco">Preço:</label>
+        <input type="number" name="preco" id="preco" step="0.01" required>
+        <br>
+        <input type="submit">
+    </form>
+    <p><a href="http://localhost:3000">Voltar para Home</a></p>
+</body>
+</html>
