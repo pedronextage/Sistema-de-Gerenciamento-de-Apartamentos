@@ -9,19 +9,20 @@
     <h1>Cadastro Apartamento</h1>
     <form action="/cadastrar_apartamento" method="post">
         <label for="bloco">Bloco: </label><br>
-        <select id="bloco" name="bloco" required>
-            <option value="">Selecione</option>
-            <option value="BA">Bloco A</option>
-            <option value="BB">Bloco B</option>
-            <option value="BC">Bloco C</option>
-            <option value="BD">Bloco D</option>
-            <option value="BE">Bloco E</option>
-</select><br><br>
+        <select id="bloco" name="bloco" aria-placeholder="Selecione"required>
+            <option value="A">Bloco A</option>
+            <option value="B">Bloco B</option>
+            <option value="C">Bloco C</option>
+            <option value="D">Bloco D</option>
+            <option value="E">Bloco E</option>
+        </select><br><br>
         <label for="number_ap">Número do Apartamento:</label>
         <input type="number" id="number_ap" name="number_ap">
         <br>
         <input type="submit" value="Cadastrar">
     </form>
+    <form onsubmit="alert('Cadastro realizado com sucesso!');
+    return false;">
     <p><a href="http://localhost:3000">Voltar para Home</a></p>
 </body>
 </html>
