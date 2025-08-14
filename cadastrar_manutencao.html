@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condomínio</title>
+</head>
+<body>
+    <h1>Cadastrar Manutenção</h1>
+<br>
+<br>
+<form action="/cadastrar_tipo_manutencao" method="post"></form>
+<label for="tipo_manutencao">Tipo de Manutenção:</label><br>
+    <select id="tipo_manutencao" name="tipo_manutencao">
+        <option value="pintra">Pintura</option>
+        <option value="rede_eletrica">Rede Elétrica</option>
+        <option value="ar_condicionado">Ar Condicionado</option>
+        <option value="encanamento">Encanamento</option>
+        <option value="internet">Internet</option>
+</select><br><br>
+<label for="data_manutencao">Data da Manutenção:</label>
+    <input type="date"
+           id="data_manutencao"
+           name="data_manutencao"><br>
+<label for="local">Local:</label>
+     <input type="text"
+            id="local"
+            name="local"
+            required><br><br>
+            </form>
+        <input type="submit" value="Cadastrar">
+    <form onsubmit="alert('Cadastro realizado com sucesso!');
+    return false;"></form>
+    <input type="submit" value="Voltar" href="http://localhost:3000">
+</body>
+</html>
+

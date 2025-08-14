@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condomínio</title>
+</head>
+<body>
+    <h1>Registrar Pagamento</h1>
+<br>
+<br>
+<form action="/registrar_pagamento" method="post"></form>
+<label for="apartamento">Apartamento:</label>
+    <input type="number"
+           id="apartamento"
+           name="apartamento"><br>
+<label for="CPF">CPF:</label>
+     <input type="text"
+            id="CPF"
+            name="CPF"
+            required><br>
+<label for="morador">Morador:</label>
+     <input type="text"
+            id="morador"
+            name="morador"
+            required><br>
+<label for="telefone">Telefone:</label>
+    <input type="tel"
+            id="telefone"
+            name="telefone"><br><br>
+<label for="mes_ano_referencia">Mês/Ano Referência:</label>
+     <select id="mes_ano_referencia" name="mes_ano_referencia" required>
+        <option value="01/2025">Janeiro/2025</option>
+        <option value="02/2025">Fevereiro/2025</option>
+        <option value="03/2025">Março/2025</option>
+        <option value="04/2025">Abril/2025</option>
+        <option value="05/2025">Maio/2025</option>
+        <option value="06/2025">Junho/2025</option>
+        <option value="07/2025">Julho/2025</option>
+        <option value="08/2025">Agosto/2025</option>
+        <option value="09/2025">Setembro/2025</option>
+        <option value="10/2025">Outubro/2025</option>
+        <option value="11/2025">Novembro/2025</option>
+        <option value="12/2025">Dezembro/2025</option><br>
+    </select><br><br>
+<label for="valor">Valor:</label>
+    <input type="number"
+            id="valor"
+            name="valor"><br><br>
+            <input type="submit" value="Pagar">
+    <form onsubmit="alert('Pagamento realizado com sucesso!');
+    return false;">
+    </form>
+    <input type="submit" value="Voltar" href="http://localhost:3000">
+
+</body>
+</html>
