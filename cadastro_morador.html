@@ -9,6 +9,7 @@
     <h1>Cadastrar Morador</h1>
 <br>
 <br>
+<form action="/cadastrar_morador" method="post"></form>
 
 <label for="CPF">CPF:</label>
      <input type="text"
@@ -43,3 +44,64 @@
            name="apartamento_responsavel_não"
            value="não">
     <label for="apartamento_responsavel_não">Não</label><br>
+<p>Proprietário do apartamento?</p>
+    <input type="radio"
+           id="proprietario_ap_sim"
+           name="proprietario_ap_sim"
+           value="sim">
+    <label for="proprietario_ap_sim">Sim</label><br>
+    <input type="radio"
+           id="proprietario_ap_não"
+           name="proprietario_ap_não"
+           value="não">
+    <label for="proprietario_ap_não">Não</label><br>
+<p>Possui veículo?</p>
+    <input type="radio"
+           id="possui_veiculo_sim"
+           name="possui_veiculo_sim"
+           value="sim">
+    <label for="possui_veiculo_sim">Sim</label><br>
+    <input type="radio"
+           id="possui_veiculo_não"
+           name="possui_veiculo_não"
+           value="não">
+    <label for="possui_veiculo_não">Não</label><br><br>
+<label for="quantidade_vagas">Quantidade de vagas de garagem:</label>
+     <input type="text"
+            id="quantidade_vagas"
+            name="quantidade_vagas"
+            required><br>
+<label for="num_vaga">Número da vaga:</label>
+     <input type="text"
+            id="num_vaga"
+            name="num_vaga"
+            required><br><br>
+    
+<h1>Cadastrar Veículos</h1>
+<label for="placa">Placa do veículo:</label>
+     <input type="text"
+            id="placa"
+            name="placa"
+            placeholder="Digite a placa do veículo"
+            required><br>
+<label for="marca">Marca:</label>
+     <input type="text"
+            id="marca"
+            name="marca"
+            placeholder="Digite a marca do veículo"
+            required><br>
+<label for="modelo">Modelo:</label>
+     <input type="text"
+            id="modelo"
+            name="modelo"
+            placeholder="Digite o modelo do veículo"
+            required><br>
+</form>
+<br>
+<br>
+<input type="submit" value="Cadastrar">
+    <form onsubmit="alert('Cadastro realizado com sucesso!');
+    return false;">
+    <input type="submit" value="Voltar" href="http://localhost:3000">
+</body>
+</html>
