@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condomínio</title>
+    <title>Condomínio - Tipo de Manutenção</title>
+    <link rel="stylesheet" href="cadastrar_tipo_manutencao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Cadastrar Tipo de Manutenção</h1>
-<br>
-<br>
-<form action="/cadastrar_tipo_manutencao" method="post"></form>
-<label for="observacoes">Descrição da Manutenção:</label><br>
-    <textarea id="tipo_manutencao"
-              name="tipo_manutencao"
-              rows="5"
-              cols="50"></textarea><br><br>
-              </form>
-        <input type="submit" value="Cadastrar">
-    <form onsubmit="alert('Cadastro realizado com sucesso!');
-    return false;"></form>
-    <input type="submit" value="Voltar" href="http://localhost:3000">
+    <div class="container">
+        <header class="header">
+            <h1>Cadastrar Tipo de Manutenção</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="card">
+                <form action="/cadastrar_tipo_manutencao" method="post" class="form-manutencao">
+                    <div class="form-group">
+                        <label for="tipo_manutencao">Descrição da Manutenção:</label>
+                        <textarea id="tipo_manutencao" name="tipo_manutencao" rows="5" placeholder="Descreva o tipo de manutenção..." required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='http://localhost:3000'">Voltar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

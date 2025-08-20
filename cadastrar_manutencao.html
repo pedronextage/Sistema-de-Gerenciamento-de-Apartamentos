@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condomínio</title>
+    <title>Condomínio - Cadastrar Manutenção</title>
+    <link rel="stylesheet" href="cadastrar_manutencao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Cadastrar Manutenção</h1>
-<br>
-<br>
-<form action="/cadastrar_tipo_manutencao" method="post"></form>
-<label for="tipo_manutencao">Tipo de Manutenção:</label><br>
-    <select id="tipo_manutencao" name="tipo_manutencao">
-        <option value="pintra">Pintura</option>
-        <option value="rede_eletrica">Rede Elétrica</option>
-        <option value="ar_condicionado">Ar Condicionado</option>
-        <option value="encanamento">Encanamento</option>
-        <option value="internet">Internet</option>
-</select><br><br>
-<label for="data_manutencao">Data da Manutenção:</label>
-    <input type="date"
-           id="data_manutencao"
-           name="data_manutencao"><br>
-<label for="local">Local:</label>
-     <input type="text"
-            id="local"
-            name="local"
-            required><br><br>
-            </form>
-        <input type="submit" value="Cadastrar">
-    <form onsubmit="alert('Cadastro realizado com sucesso!');
-    return false;"></form>
-    <input type="submit" value="Voltar" href="http://localhost:3000">
+    <div class="container">
+        <header class="header">
+            <h1>Cadastrar Manutenção</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="card">
+                <form action="/cadastrar_tipo_manutencao" method="post" onsubmit="alert('Cadastro realizado com sucesso!')">
+                    <div class="form-group">
+                        <label for="tipo_manutencao">Tipo de Manutenção:</label>
+                        <select id="tipo_manutencao" name="tipo_manutencao" required>
+                            <option value="">Selecione...</option>
+                            <option value="pintura">Pintura</option>
+                            <option value="rede_eletrica">Rede Elétrica</option>
+                            <option value="ar_condicionado">Ar Condicionado</option>
+                            <option value="encanamento">Encanamento</option>
+                            <option value="internet">Internet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data_manutencao">Data da Manutenção:</label>
+                        <input type="date" id="data_manutencao" name="data_manutencao" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="local">Local:</label>
+                        <input type="text" id="local" name="local" placeholder="Ex: Bloco A - Sala 101" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='http://localhost:3000'">Voltar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
-
