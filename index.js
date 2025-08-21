@@ -50,6 +50,41 @@ app.post('/cadastro_ap', (req, res) => {
     });
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html'); // Caminho absoluto para o arquivo
+});
+
+
+
+
+app.get('/manter_bloco', (req, res) => {
+    res.sendFile(__dirname + '/manter_bloco.html'); // Certifique-se de que o arquivo existe
+});
+
+// Rota POST para enviar os dados do formulário ao banco de dados
+app.post('/manter_bloco', (req, res) => {
+    console.log('Dados recebidos:', req.body);
+
+    const descricao = req.body.descricao; // Nome do campo no formulário HTML
+    const quantidade = req.body.quantidade; // Nome do campo no formulário HTML
+
+    // Query para inserir os dados no banco de dados
+    const query = 'INSERT INTO manter_bloco (descricao, quantidade) VALUES (?, ?)';
+    db.query(query, [descricao, quantidade], (err, result) => {
+        if (err) {
+            console.error('Erro ao inserir no banco de dados:', err);
+            res.status(500).send('Erro ao manter bloco.');
+        } else {
+            console.log('Processo feito com sucesso:', result);
+            res.redirect('/'); // Redireciona para a página inicial ou outra página
+        }
+    });
+});
+
+
+
+
+
 // Inicia o servidor
 app.listen(3000, () => {
     console.log('Servidor rodando em http://localhost:3000');
